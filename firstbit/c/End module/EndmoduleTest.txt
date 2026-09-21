@@ -1,0 +1,57 @@
+Name - Shraddha Sidharth Jagtap
+FRN No.:-16J0726/013
+Set - B
+
+Q1)#include <stdio.h>
+
+void main()
+{
+    char str[100];
+    int i, count = 1;
+
+    printf("Enter a string: ");
+    scanf("%s",&str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == ' ')
+        {
+            count++;
+        }
+    }
+
+    printf("Number of words = %d", count);
+}
+Q2)
+struct music{
+	int id;
+	char title[20];
+	char artist[20];
+	int duration;
+};
+void storedata(int ,char ,char,int);
+void main(){
+	struct music m1;
+	printf("Enter the details of the songs : ");
+	scanf("%d",&m1);
+	
+	s1=storedata();
+	displaydata();
+	
+}
+void storedata(){
+	scanf("%d",&m1.id);
+	scanf("%s"m1.title);
+	scanf("%s",m1.artist);
+	scanf("%d",m1.duration);
+}
+
+void displaydata(){
+	printf("Id : ",m1.id);
+	printf("Title : ",m1.title);
+	printf("Artist : ",m1.artist);
+	printf("Duration : ",m1.duration);
+}
+
+	
+}
