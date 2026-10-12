@@ -1,0 +1,51 @@
+Assignment 1 -SQL
+
+
+Q1) show databases;
+
+Q2) create table countries
+    (country_id int, country_name varchar(40), region_id int);
+   
+    desc countries;
+
+Q3) create table jobs
+    (job_id int primary key, 
+     job_title varhchar(20) not null,
+     min_salary int ,
+     max_salary int check (max_salary <= 25000));
+
+Q4) create table job_history
+    (employee_id int, start_date date, end_date date and department_id int);
+
+Q5) alter table countries
+    add constrain unique (country_id);
+
+Q6) create table jobs_default
+    (job_id int,
+     job_title varchar(20) default (""),
+     min_salary decimal(7,2) default 8000,
+     max_salary default Null;
+    
+Q7) create table Department (
+    dept_id decimal(4,0) not null,
+    dept_name varchar(30) not null,
+    manager_id decimal(6,0) not null,
+    location_id decimal(4,0),
+    primary key (dept_id, manager_id));
+
+Q8) create table employee
+    (employee_id int,
+    first_name varchar(50),
+    last_name varchar(50),
+    email varchar(100),
+    phone_number varchar(20),
+    hire_date date,
+    job_id int,
+    salary decimal(10,2),
+    commission decimal(10,2),
+    manager_id int,
+    department_id int);
+    
+     alter table employee
+     add foreign key(dept_is) references department(dept_id);
+
